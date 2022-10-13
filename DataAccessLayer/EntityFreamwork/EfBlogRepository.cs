@@ -10,7 +10,12 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.EntityFreamwork
 {
-    public  class EfBlogRepository:GenericRepository<Blog>,IBlogDal
+    public class EfBlogRepository : GenericRepository<Blog>, IBlogDal
     {
+        Context c = new Context();
+        public List<Blog> GetListAll()
+        {
+            return c.Blogs.ToList();
+        }
     }
 }

@@ -26,7 +26,7 @@ namespace proje_2
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<ICategoryDal, CategoryRepository>();
-            services.AddScoped<IBlogDal, BlocgRepostory>();
+            services.AddScoped<IBlogDal, BlogRepostory>();
 
             services.AddControllersWithViews();
         }

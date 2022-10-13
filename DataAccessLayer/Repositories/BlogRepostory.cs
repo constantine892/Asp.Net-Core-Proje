@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repositories
 {
-    public class BlocgRepostory : IBlogDal
+    public class BlogRepostory : IBlogDal
 
     {
         public void AddBlog(Blog blog)
@@ -31,6 +31,12 @@ namespace DataAccessLayer.Repositories
         {
             using var c = new Context();
             return c.Blogs.Find(id  );
+        }
+
+        public List<Blog> GetListAll()
+        {
+            using var c = new Context();
+            return c.Blogs.ToList();
         }
 
         public List<Blog> ListAllBlog()
