@@ -9,7 +9,7 @@ namespace proje_2.Controllers
         BlogManager bm = new BlogManager(new EfBlogRepository());
         public IActionResult Index()
         {
-            var Values = bm.GetList();
+            var Values = bm.GetBlogListWithCategory();
             return View(Values);
         }
     }
